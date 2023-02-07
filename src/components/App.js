@@ -51,7 +51,7 @@ export default function App() {
     //    helper to [GET] all friends from `http://buddies.com/api/friends`
     axios.get("http://buddies.com/api/friends")
     .then(res=>{
-      console.log(res)
+      setFriends(res.data)
     }).catch(err=>console.log(err))
   }
 
