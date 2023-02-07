@@ -81,11 +81,12 @@ export default function FriendForm(props) {
         {/* ////////// RADIO BUTTONS ////////// */}
         {/* ////////// RADIO BUTTONS ////////// */}
         <label>Single
-
+            <input type="radio" />
+            
         </label>
 
         <label>Married
-
+            <input type="radio"/>
         </label>
       </div>
 
