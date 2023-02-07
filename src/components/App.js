@@ -71,6 +71,12 @@ export default function App() {
   //////////////// EVENT HANDLERS ////////////////
   //////////////// EVENT HANDLERS ////////////////
   //////////////// EVENT HANDLERS ////////////////
+  const validate = (name, value) => {
+    yup.reach(schema, name)
+    .validate(value)
+    .then(()=> setFormErrors({...formErrors, [name]:""}))
+    .catch(err=> setFormErrors({...formErrors , [name]: err.errors[0]}) )
+  }
   const inputChange = (name, value) => {
     // 🔥 STEP 10- RUN VALIDATION WITH YUP
     setFormValues({
