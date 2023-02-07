@@ -63,6 +63,7 @@ export default function App() {
     .then(res=>{
           setFriends([res.data, ...friends ])
     }).catch(err => console.log(err))
+    .finally(()=>setFormValues(initialFormValues))
     
   }
 
